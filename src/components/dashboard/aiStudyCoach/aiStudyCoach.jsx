@@ -1,6 +1,6 @@
 // AIStudyCoach.jsx
 import React, { useEffect, useRef, useState } from "react";
-import "./AIStudyCoach.css";
+import "./aiStudyCoach.css";
 import { sendMessageToAI } from "../../../services/api";
 import { logActivity } from "../../../services/analyzerData";
 import ReactMarkdown from "react-markdown";
