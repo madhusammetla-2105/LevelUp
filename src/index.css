@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Green Palette - "Old Colors" as requested */
+  --primary-green: #2d5a27;      /* Dark Green */
+  --primary-hover: #23471f;
+  --peacock-green: #0d3d2a;      /* Peacock Dark Green */
+  --light-green: #c3e3c3;        /* Light Green Shade */
+  --soft-green: #ecf3ec;         /* Soft BG Green */
+  --accent-green: #a5d6a7;       /* Mid Green */
+  --faded-green: #f4f9f4;        /* Very light green */
+  
+  /* System Greys replaced with Green-ish Slate */
+  --stone-50:  #f8faf8;
+  --stone-100: #ecf3ec;
+  --stone-200: #dce7dc;
+  --stone-300: #c8d6c8;
+  --stone-400: #a3b2a3;
+  --stone-500: #788778;
+  --stone-600: #576357;
+  --stone-700: #444c44;
+  --stone-800: #2d332d;
+
+  --text-main: #0d3d2a;          /* Using Peacock Green for text */
+  --text-muted: #576357;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  /* Shadows - Subtle Green Tint */
+  --shadow-sm: 0 2px 10px rgba(45, 90, 39, 0.05);
+  --shadow-md: 0 4px 20px rgba(45, 90, 39, 0.08);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--faded-green);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  overscroll-behavior-y: none; /* Prevent vertical rubber-banding gap */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* Global Modal & Overlay System (Top Layer) */
+.global-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 61, 42, 0.7); /* Peacock dark overlay */
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; /* Ensure it's above everything */
+  animation: fadeIn 0.3s ease;
+}
+
+.global-modal {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid var(--light-green);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.warning-icon-large {
+  font-size: 80px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.modal-title-critical {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: #d93025;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.modal-text {
+  color: var(--stone-600);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.modal-btn-primary {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.modal-btn-primary:hover {
+  background: var(--peacock-green);
+  transform: translateY(-2px);
+}

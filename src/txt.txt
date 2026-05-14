@@ -1,0 +1,45 @@
+Let's think realistically. If the user signs in for the first time, then he should enter:
+- his name
+- his age
+- selecting male or female
+- his email ID
+- some parent details like parent email ID, parent phone number, student phone number, etc.
+
+Let's work on student profile. Remove all unreal data or Dummy data. Student profile contains the real information if the user only signed in with the personal information. 
+And if a student already signed up and he is trying to log in, the information should appear in the student profile. 
+So make required changes or updates related to these futures. 
+
+Delete unwanted components and visible components from our project like Cognate to loader, session recap, and all. Make our code as organized as possible for better readability and understanding. 
+Also remove parent/partner component also. 
+
+Okay everything is fine and related to Student Popel but some of the stylings are unchanged. They are not updated to our new stylings that have recently been informed to you. Some of the stylings
+are not changed; they are still in blue in color. Make sure that they should be changed and they should seem like or they are Match with the remaining UI components. 
+
+Remove that settings icon in the top right corner of  our main interface.Also remove dummy data from the student profile like streak rate and hours forecast.
+Make them real only if the user uses those components while he is studying. Make it as real as possible. And also integrate a photo uploading for the student 
+profile image, like we have one emoji in that circular icon. I am thinking to add the user's image at that point, which should be taken at the time of sign-up. 
+
+
+Let's work on the student profile icon at the top right corner. If the user clicks on that icon, we will get complete details of that user, like:
+- user details
+- parent details
+- stars streak rate
+- stars he got
+
+lets work on new component ai-learning-path-generater named as "generate path"
+i am thinking to built a ai-learning-patt-generater. using n8n workflow. but 
+i need a frount-end interface for learning-path-generater.
+how the interface seems like:
+first divide the middle section of the page into two horizontal parts as same as pdf-summrizer.
+divide the section into 2:8 ratio. at 2/10 part contains a input container and submit button.
+8/10 th part contains generated parth in container as same as pdf-summrizer container.
+genereate the ui with same ui stylings and desigens. do not add or chnage anything.
+
+So let's work on both the PDF summariser and the path generator components. Let's work on UI designing. I want to change that UI design to look more interactive and more attractive. 
+Slightly decrease the size of input boxes in both of the PDF summariser and path generator and decrease the size of the submit button also. 
+And increase the output area for better user experience. 
+
+Now let's work on resources component. The user User Ask to Generated path in AI path
+generator that generated path should be added to the resources, like having the name 
+of the learning resource. no of days or weeks or months to complete the learning path.
+also contains resoures like links and all. For now, just add some dummy data. They should be matched with our portal. 

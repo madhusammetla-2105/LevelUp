@@ -1,0 +1,74 @@
+.topbar {
+    position: sticky;
+    top: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    height: 60px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--light-green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+.topbar-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--peacock-green);
+    letter-spacing: -0.02em;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.topbar-icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--soft-green);
+    border: none;
+    color: var(--primary-green);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.topbar-icon-btn:hover {
+    background: var(--light-green);
+    color: var(--peacock-green);
+    transform: translateY(-1px);
+}
+
+.topbar-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: var(--primary-green);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-heading);
+}
+
+.topbar-logout-btn:hover {
+    background: var(--peacock-green);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(13, 61, 42, 0.2);
+}
+
+.topbar-logout-btn .material-symbols-outlined {
+    font-size: 20px;
+}

@@ -1,0 +1,48 @@
+.schedule-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+}
+
+.schedule-card h4 {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    font-family: "Space Grotesk", sans-serif;
+    margin-bottom: 20px;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.schedule-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.schedule-time {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    min-width: 54px;
+}
+
+.schedule-details h5 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: var(--muted);
+}
+
+.schedule-details h5.active {
+    color: var(--text);
+}
+
+.schedule-details p {
+    font-size: 12px;
+    color: var(--muted);
+}

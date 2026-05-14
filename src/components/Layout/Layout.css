@@ -1,0 +1,35 @@
+.layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 340px;
+    grid-template-rows: 60px 1fr;
+    height: 100%;
+    width: 100%;
+    background: var(--faded-green);
+    overflow: hidden; /* Prevent layout itself from showing gaps */
+}
+
+.layout-main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 2.5rem; /* Increased padding */
+    overflow-y: auto;
+}
+
+@media (max-width: 1300px) { /* Adjusted breakpoint for larger sidebars */
+    .layout {
+        grid-template-columns: 280px 1fr;
+    }
+    .layout-main {
+        grid-column: 2 / 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+    .layout-main {
+        grid-column: 1 / 2;
+        padding: 1.5rem;
+    }
+}

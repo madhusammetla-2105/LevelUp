@@ -1,0 +1,207 @@
+.pin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 61, 42, 0.8); /* Dark Peacock Overlay */
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001; /* Highest Layer */
+    animation: fadeIn 0.4s ease-out;
+}
+
+
+.pin-modal-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(45, 90, 39, 0.1);
+}
+
+.pin-icon-container {
+    width: 80px;
+    height: 80px;
+    background: #ecf3ec;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.shield-icon {
+    font-size: 40px;
+    color: #2d5a27;
+}
+
+.pin-modal-card h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.pin-subtitle {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.pin-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.pin-box {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #f0f4f0;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+}
+
+.pin-box.filled {
+    border-color: #2d5a27;
+    background: #ffffff;
+}
+
+.pin-box input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.pin-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.pin-box.filled .pin-dot {
+    background: #2d5a27;
+    width: 16px;
+    height: 16px;
+}
+
+.attempts-text {
+    color: #d93025;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.unlock-btn {
+    width: 100%;
+    background: #2d5a27;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.unlock-btn:hover:not(:disabled) {
+    background: #23471f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(45, 90, 39, 0.2);
+}
+
+.unlock-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.forgot-link {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    border-color: #d93025 !important;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.shake .pin-icon-container {
+    background: #fce8e6;
+}
+
+.shake .shield-icon {
+    color: #d93025;
+}
+
+.pin-modal-back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10002;
+}
+
+.pin-modal-back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .pin-modal-back-btn {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,64 @@
+.cognitive-load-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+}
+
+.cognitive-load-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.cognitive-load-header h4 {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.cognitive-load-header span {
+    color: var(--primary);
+}
+
+.cognitive-load-bars {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.cognitive-load-bar {
+    height: 10px;
+    flex: 1;
+    background: var(--surface-4);
+    border-radius: 999px;
+}
+
+.cognitive-load-bar.active {
+    background: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.cognitive-load-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cognitive-load-info p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cognitive-load-info span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.cognitive-load-info .warning {
+    color: #ffb86b;
+    font-weight: 700;
+}
