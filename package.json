@@ -15,6 +15,7 @@
     "axios": "^1.16.0",
     "dayjs": "^1.11.20",
     "face-api.js": "^0.22.2",
+    "firebase": "^12.13.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",
     "postcss": "^8.5.14",
